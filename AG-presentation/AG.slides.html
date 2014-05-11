@@ -1900,7 +1900,7 @@ In&nbsp;[7]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Inne metody sztucznej inteligencji to inspirowane biologią, sieci neuronowe i algorytmy ewolucyjne (uogólnienie algorytmów genetycznych), ponadto systemy oparte na wiedzy (systemy ekspertowe), statystyce (uczenie maszynowe) lub logice (prolog). </p>
+<p>Inne metody sztucznej inteligencji to inspirowane biologią, sieci neuronowe i algorytmy ewolucyjne (uogólnienie algorytmów genetycznych, przykład: algorytmy roju), ponadto systemy oparte na wiedzy (systemy ekspertowe), statystyce (uczenie maszynowe) lub logice (prolog). </p>
 </div>
 </div>
 </div>
@@ -2003,7 +2003,7 @@ Struktura chemiczna DNA</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Osobniki w populacji mogą mieć różne cechy, niektóre pożądane, inne nie. Osobniki o lepszych cechach będą częściej miały okazję do przekazania materiału genetycznego dalej. Z czasem ich kod genetyczny będzie coraz bardziej powszechny w populacji. W ten sposób populacja zbiega do optimum.</p>
+<p>Osobniki w populacji mogą mieć różne cechy, niektóre pożądane, inne niekoniecznie. Osobniki o lepszych cechach będą częściej miały okazję do przekazania materiału genetycznego dalej. Z czasem ich kod genetyczny będzie coraz bardziej powszechny w populacji. W ten sposób populacja zbiega do optimum.</p>
 <p>Przypadkiem mogą być chociażby żyrafy, które w procesie ewolucji wyhodowały sobie długie szyje umożliwiające im zdobywanie pożywienia niedostępnego dla innych zwierząt roślinożernych.</p>
 </div>
 </div>
@@ -2810,7 +2810,7 @@ In&nbsp;[23]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Im większa populacja, tym większa różnorodność genetyczna, ale i dłuższy czas dochodzenia do zbieżności</p>
+<p>Im większa populacja, tym większa różnorodność genetyczna, ale i dłuższy czas dochodzenia do zbieżności. W przypadku prostych problemów zwykle wystarcza populacja kilku osobników. Dla skomplikowanych problemów wielkość populacji można liczyć w setkach/tysiącach.</p>
 </div>
 </div>
 </div>
@@ -2822,6 +2822,7 @@ In&nbsp;[23]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="prawdopodobie-stwo-krzy-owania">Prawdopodobieństwo krzyżowania</h3>
+<p><img src="http://cdn.buzznet.com/assets/users16/falloutboyluvr96/default/everyone-world-cross-their-fingers--large-msg-117995562012.jpg" alt=""></p>
 </div>
 </div>
 </div><aside class="notes">
@@ -2832,7 +2833,7 @@ In&nbsp;[23]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Krzyżowanie odpowiada za mieszanie cech wśród osobników.
-Im większe prawdopodobieństwo krzyżowania, tym większa szansa na uzyskanie osiągnięcie pozytywnej synergii między osobnikami.</p>
+Im większe prawdopodobieństwo krzyżowania, tym większa szansa na uzyskanie osiągnięcie pozytywnej synergii między osobnikami. Prawidłowo dobrane krzyżowanie zwykle działa dobrze przy prawdopodobieństwie krzyżowania 0.5-1.0</p>
 </div>
 </div>
 </div>
@@ -2854,7 +2855,8 @@ Im większe prawdopodobieństwo krzyżowania, tym większa szansa na uzyskanie o
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mutacja pełni rolę szumu, ma zapewnić większą różnorodność osobników w populacji. Za niskie prawdopodobieństwo mutacji sprawia, że algorytm za szybko zbiega, zwykle do nieoptymalnego rozwiązania. Za wysokie prawdopodobieństwo mutacji sprawia, że algorytm staje się losowy i nie osiąga zbieżności.</p>
+<p>Mutacja pełni rolę szumu, ma zapewnić większą różnorodność osobników w populacji. Za niskie prawdopodobieństwo mutacji sprawia, że algorytm za szybko zbiega, zwykle do nieoptymalnego rozwiązania. Za wysokie prawdopodobieństwo mutacji sprawia, że algorytm staje się losowy i nie osiąga zbieżności.
+Typowe prawdopodobieństwo mutacji to 0.01-0.05.</p>
 </div>
 </div>
 </div>
@@ -2878,7 +2880,7 @@ Im większe prawdopodobieństwo krzyżowania, tym większa szansa na uzyskanie o
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Określa na jakiej podstawie dobieramy osobniki, które mają przejść do następnego pokolenia.
-Najpopularniejsze metody selekcji to metoda ruletki lub turniejowa.</p>
+Najpopularniejsze metody selekcji to metoda ruletki lub turniejowa. Kryteria selekcji można zmieniać i skalować w trakcie ewolucji. W zależności od problemu, różne sposoby selekcji mogą wykazywać różną wydajność.</p>
 </div>
 </div>
 </div>
@@ -3478,7 +3480,18 @@ Ip4gOI7juBb9D1RGPDu4YQGJAAAAAElFTkSuQmCC
 <p><img src="http://imgs.xkcd.com/comics/travelling_salesman_problem.png" alt=""></p>
 </div>
 </div>
-</div></section><section>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mając dany zbiór miast i możliwych połączeń między parami miast, zadaniem jest znalezienie najkrótszej drogi, która pozwoli odwiedzić każde z miast i wrócić do punktu wyjścia.</p>
+</div>
+</div>
+</div>
+    </aside></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -5327,7 +5340,18 @@ Uzyskany rezultat często mieści się w odległości 10-15% od globalnego optim
 <h3 id="tutaj-implementacja-programu-przy-u-yciu-jakiego-frameworka-do-genetic-programming-python-java-cokolwiek-">Tutaj implementacja programu przy użyciu jakiegoś frameworka do Genetic Programming (python, java, cokolwiek)</h3>
 </div>
 </div>
-</div></section>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>W podobny sposób możemy projektować różne urządzenia mechaniczne i elektryczne, których konstrukcje potrafimy składać z mniejszych klocków oraz oceniać poszczególne rozwiązania. Możemy w ten sposób projektować także funkcje czy wręcz całe programy.</p>
+</div>
+</div>
+</div>
+    </aside></section>
     </section><section>
     <section>
     
@@ -5450,7 +5474,7 @@ In&nbsp;[2]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="optymalizacja-prototyp-w">Optymalizacja prototypów</h3>
-<p>samochodziki?</p>
+<p>samochodziki? regulator PID?</p>
 </div>
 </div>
 </div></section><section>
@@ -5650,8 +5674,8 @@ paru z nas proponuje problemy, które następnie rozwiązujemy w kilkuosobowych 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="pomys-y">Pomysły</h3>
-<h1 id="-">??</h1>
+<h3 id="pomys-y-">Pomysły?</h3>
+<p><img src="http://us.cdn4.123rf.com/168nwm/ratoca/ratoca1302/ratoca130200304/17946346-please.jpg" alt="please"></p>
 </div>
 </div>
 </div></section><section>
