@@ -1847,6 +1847,29 @@ Jednak dla ciekawości przytoczę sposób tworzenia prostej appki.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="aplikacje-nieprzyjazne">Aplikacje nieprzyjazne</h2>
+<p><img src="http://i3.asp.net/asp.net/images/whitepapers/mobile/image001.png?cdn_id=2014-04-02-001" alt=""></p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="aplikacje-przyjazne">Aplikacje przyjazne</h2>
+<p><img src="http://i3.asp.net/asp.net/images/whitepapers/mobile/image002.png?cdn_id=2014-04-02-001" alt="">
+Źródło: <a href="http://www.asp.net/whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application">http://www.asp.net/whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application</a></p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="responsive-web-design">Responsive Web Design</h3>
 <p>Obsługa tej techniki odbywa się za pomocą tzw. <strong> media queries </strong> - które pozwolą rozpoznać wielkość przeglądarki i wstawić odpowiedni arkusz stylu, lub jego fragment. Do działania możemy również użyć różnych skryptów JavaScript.</p>
 </div>
@@ -1939,13 +1962,12 @@ Jednak dla ciekawości przytoczę sposób tworzenia prostej appki.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Solve the problem on the client – With careful use of CSS and progressive enhancement you can create markup, styles, and scripts that adapt to whatever browser is running them. For example, with CSS 3 media queries, you could create a multi-column layout that turns into a single column layout on devices whose screens are narrower than a chosen threshold.</p>
+<p>Rozwiąż problem po stronie klienta – przy odpowiednim użyciu CSS i kolejnym poprawkom można stworzyć szablony, które adaptują się do odwiedzającej ich przeglądarki. Np. przy użyciu CSS 3 media queries, możesz stworzyć multi-column layout który zmienia się w single column layout na urządzeniach o szerokości ekranu mniejszej niż założona.</p>
 <ul>
-<li>Advantage: Optimizes rendering for the specific device in use, even for unknown future devices according to whatever screen and input characteristics they have</li>
-<li>Advantage: Easily lets you share server-side logic across all device types – minimal duplication of code or effort</li>
-<li>Disadvantage: Mobile devices are so different from desktop devices that you may really want your mobile pages to be completely different from your desktop pages, showing different information. Such variations can be inefficient or impossible to achieve robustly through CSS alone, especially considering how inconsistently older devices interpret CSS rules. This is particularly true of CSS 3 attributes.</li>
-<li>Disadvantage: Provides no support for varying server-side logic and workflows for different devices. You can’t, for example, implement a simplified shopping cart checkout workflow for mobile users by means of CSS alone.</li>
-<li>Disadvantage: Inefficient bandwidth use. You server may have to transmit the markup and styles that apply to all possible devices, even though the target device will only use a subset of that information.</li>
+<li>Zaleta: Optymizuje wygląd strony dla nieznanych urządzeń, polega tylko na wymiarach ekranu.</li>
+<li>Zaleta: Logika serwera taka sama na wszysktich urządzeniach, brak duplikacji kodu.</li>
+<li>Wada: Czasami chcemy zmienić logikę serwera na potrzeby urządzeń mobilnych, tutaj nie mamy takiej możliwości. Nie można na przykład zaimplementować prostszego workflowu dla jakiegoś przypadku użycia</li>
+<li>Wada: Nieefektywne użycie łącza. Serwer musi przekazać style obsługujące wszystkie potencjalne urządzenia, podczas, gdy klient użyje tylko części przesłanej informacji</li>
 </ul>
 </div>
 </div>
@@ -1968,14 +1990,14 @@ Jednak dla ciekawości przytoczę sposób tworzenia prostej appki.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Solve the problem on the server – If your server knows what device is accessing it – or at least the characteristics of that device, such as its screen size and input method, and whether it’s a mobile device – it can run different logic and output different HTML markup.</p>
+<p>Rozwiąż problem po stronie serwera – jeśli serwer wie, jakie urządzenie wysyła żądania – albo zna cechy tego urządzenia, takie jak wielkość ekranu i sposób wprowadzania informacji, oraz czy jest to urządzenie mobilne – wtedy serwer może uruchomić inną logikę i zwrócić stronę dedykowaną dla takiego urządzenia</p>
 <ul>
-<li>Advantage: Maximum flexibility. There’s no limit to how much you can vary your server-side logic for mobiles or optimize your markup for the desired, device-specific layout.</li>
-<li>Advantage: Efficient bandwidth use. You only need to transmit the markup and styling information that the target device is going to use.</li>
-<li>Disadvantage: Sometimes forces repetition of effort or code (e.g., making you create similar but slightly different copies of your Web Forms pages or MVC views). Where possible you will factor out common logic into an underlying layer or service, but still, some parts of your UI code or markup may have to be duplicated and then maintained in parallel.</li>
-<li>Disadvantage: Device detection is not trivial. It requires a list or database of known device types and their characteristics (which may not always be perfectly up-to-date) and isn’t guaranteed to accurately match every incoming request. This document describes some options and their pitfalls later.</li>
+<li>Zaleta: maksymalna elastyczność. Logika po stronie serwera może być całkowicie odmienna dla urządzeń mobilnych niż dla desktopów.</li>
+<li>Zaleta: Efektywne użycie łącza. Przesyła się tylko to, co określony klient ma wyświetlić.</li>
+<li>Wada: Czasami wymaga powtórzenia projektu lub kodu (np. tworzenia podobnych, ale jednak trochę odmiennych kopii Web Forms i widoków MVC) Kod taki musi być dodatkowo testowany i utrzymywany.</li>
+<li>Wada: Wykrycie urządzenia nie zawsze jest proste. Wymaga to bazy znanych typów urządzeń i ich cech (które nie zawsze muszą być całkowicie aktualne) i nie gwarantuje dokładnego dopasowania każdego requestu.</li>
 </ul>
-<p>To get the best results, most developers find they need to combine options (2) and (3). Minor stylistic differences are best accommodated on the client using CSS or even JavaScript, whereas major differences in data, workflow, or markup are most effectively implemented in server-side code.</p>
+<p>Dla uzyskania najlepszych rezultatów, programiści wykonują drobne poprawki stylistyczne po stronie klienta w CSS/JS, zaś większe zmiany w przepływie sterowania są implementowane w kodzie po stronie serwera.</p>
 </div>
 </div>
 </div>
@@ -2170,29 +2192,6 @@ Trzeba dostosować desktopową stronę logowania, żeby przekierowywała użytko
     return base.GetVaryByCustomString(context, custom);
 }
 </code></pre><p>W ten sposób użytkownicy mobilni nie dostaną zcache&#39;owanej strony desktopowej.</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="aplikacje-nieprzyjazne">Aplikacje nieprzyjazne</h2>
-<p><img src="http://i3.asp.net/asp.net/images/whitepapers/mobile/image001.png?cdn_id=2014-04-02-001" alt=""></p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="aplikacje-przyjazne">Aplikacje przyjazne</h2>
-<p><img src="http://i3.asp.net/asp.net/images/whitepapers/mobile/image002.png?cdn_id=2014-04-02-001" alt="">
-Źródło: <a href="http://www.asp.net/whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application">http://www.asp.net/whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application</a></p>
 </div>
 </div>
 </div></section>
